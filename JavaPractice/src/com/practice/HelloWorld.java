@@ -26,6 +26,8 @@ public class HelloWorld {
 		
 		Iterator<Car> it = carcollection.iterator();
 		
+		System.out.println("Below details are printed using Iterator");
+		
 		while (it.hasNext()) {
 			Car car = (Car) it.next();
 			System.out.println("Car Name is "+ car.getBrandname());
