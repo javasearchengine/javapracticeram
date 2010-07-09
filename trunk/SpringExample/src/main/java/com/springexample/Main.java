@@ -8,11 +8,10 @@ public class Main {
 	public static void main(String[] args){
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-		Car CarObject = (Car) context.getBean("CarBean",Car.class);
+		Vehicle1 Vehicle1Object = (Vehicle1) context.getBean("VehicleBean",Vehicle1.class);
 		
-		System.out.println("This Car is manufactured in the year "+CarObject.getMfgyear());
-		System.out.println("This Car has "+CarObject.getNoOfTyres()+" Tyres");
-		System.out.println("Just added to test SVN functionality");		
+		System.out.println("The type of the vehicle is "+Vehicle1Object.getVehicleType());
+		System.out.println("This "+Vehicle1Object.getVehicleType() +" is manufactured in the year" + Vehicle1Object.getMfgyear()); 
 		
 		
 	}

@@ -3,9 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
-	<bean id="CarBean" class="com.springexample.Car">
+	<bean id="VehicleBean" class="com.springexample.Vehicle1">
 	<constructor-arg value="2010"></constructor-arg>
 	<property name="noOfTyres" value="4"></property>
+	<property name="vehicleType" value="BIKE"></property>
 	</bean>
 
 
