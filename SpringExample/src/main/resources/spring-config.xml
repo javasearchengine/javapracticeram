@@ -2,12 +2,105 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	
-	<bean id="VehicleBean" class="com.springexample.Vehicle1">
-	<constructor-arg value="2010"></constructor-arg>
-	<property name="noOfTyres" value="4"></property>
-	<property name="vehicleType" value="BIKE"></property>
+
+	<bean id="AudioSystemBean" class="com.springexample.AudioSystem">
+		<property name="price" value="2000"></property>
 	</bean>
 
+	<bean id="VehicleBean" class="com.springexample.Vehicle1">
+		<constructor-arg value="2010" index="0"></constructor-arg>
+		<constructor-arg value="4" index="1"></constructor-arg>
+		<!--	<property name="noOfTyres" value="4"></property>-->
+		<property name="vehicleType" value="CAR"></property>
+		<!--		<property name="audioSystem" ref="AudioSystem"></property>-->
+		<property name="sampleStringProperty">
+			<idref bean="AudioSystemBean" />
+		</property>
+
+
+	</bean>
+
+
+
+	<bean id="InnerBean" class="com.springexample.ExampleBean$InnerBean">
+		<!--		<constructor-arg ref="ExampleBean"></constructor-arg>-->
+		<property name="sampleProperty" value="Sample property of the inner bean"></property>
+	</bean>
+
+	<!--
+		<bean id="ExampleBean" class="com.springexample.ExampleBean"></bean>
+	-->
+<!---->
+	<!--
+		<bean id="PrivateConstructorBean2"
+		class="com.springexample.PrivateConstructor"
+	-->
+	<!--		factory-method="createPrivateConstructorInstance">-->
+	<!--
+		<property name="sampleProperty" value="Private constructor bean
+		property 2"></property>
+	-->
+	<!--	</bean>-->
+
+	<bean id="AudioSystemBean2" class="com.springexample.PrivateConstructor"
+		factory-method="createPrivateConstructorInstance">
+		<property name="price" value="100000"></property>
+	</bean>
+
+	<bean id="ComplexBean" class="com.springexample.ComplexBean">
+		<property name="adminEmails">
+			<props>
+				<prop key="adminEmail">administrator@Example.com</prop>
+				<prop key="moderatorEmail">moderator@Example.com</prop>
+			</props>
+		</property>
+<!---->
+		<!--				<property name="someList">-->
+		<!--					<list>-->
+		<!--						<value>First element of the list</value>-->
+		<!--						<ref bean="VehicleBean"></ref>-->
+		<!--						<value>Second element of the list</value>-->
+		<!--						<ref bean="VehicleBean"></ref>-->
+		<!--					</list>-->
+		<!--				</property>-->
+
+		<property name="someMap">
+			<map>
+				<entry key="first" value="first value"></entry>
+				<entry key="second" value="Second value"></entry>
+			</map>
+		</property>
+
+		<property name="someSet">
+
+			<set>
+				<value>just some string</value>
+				<value>FIRST VALUE</value>
+			</set>
+
+		</property>
+
+	</bean>
+
+
+	<!--	Autowire Example  -->
+
+	<bean id="beanOneOne" class="com.springexample.BeanTypeOne">
+		<property name="samplePropertyBeanOne" value="First Bean Type Value"></property>
+	</bean>
+
+
+	<bean id="beanTwoOne" class="com.springexample.BeanTypeTwo"
+		autowire-candidate="true" primary="true">
+		<property name="samplePropertyBeanTwo" value="Two Bean Type Value"></property>
+	</bean>
+
+	<bean id="SampleBean" class="com.springexample.SampleBean"
+		autowire="byType" init-method="init" destroy-method="destroy">
+
+	</bean>
+
+ 
+	<!--	Autowire Example  -->
 
 </beans>
