@@ -7,10 +7,15 @@ public class Vehicle1 implements VehicleInterface {
 	private int mfgYear;
 	
 	private VehicleType vehicleType;
+	
+	private AudioSystem audioSystem;
+	
+	private String sampleStringProperty;
 
-	public Vehicle1(int mfgyear) {
+	public Vehicle1(int mfgyear,int noOfTyres) {
 		super();
 		this.setMfgyear(mfgyear);
+		this.setNoOfTyres(noOfTyres);
 	}
 
 	public void setNoOfTyres(int noOfTyres) {
@@ -35,6 +40,22 @@ public class Vehicle1 implements VehicleInterface {
 
 	public VehicleType getVehicleType() {
 		return vehicleType;
+	}
+
+	public void setAudioSystem(AudioSystem audioSystem) {
+		this.audioSystem = audioSystem;
+	}
+
+	public AudioSystem getAudioSystem() {
+		return audioSystem;
+	}
+
+	public void setSampleStringProperty(String sampleStringProperty) {
+		this.sampleStringProperty = sampleStringProperty;
+	}
+
+	public String getSampleStringProperty() {
+		return sampleStringProperty;
 	}
 
 }
