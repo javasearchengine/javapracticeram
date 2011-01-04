@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Default suite]" parallel="false">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.selenium.test.TestNGDataDrivenTest">
+        <methods>
+          <include name="setUpServer"/>
+          <include name="cleanUp"/>
+          <include name="wikiTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
