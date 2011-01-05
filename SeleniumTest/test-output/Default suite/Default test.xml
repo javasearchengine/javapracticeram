@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="ram-laptop" name="com.selenium.test.TestNGDataDrivenTest" tests="1" failures="0" timestamp="24 Dec 2010 16:57:09 GMT" time="6.647" errors="0">
-  <testcase name="wikiTest" time="0.0060" classname="com.selenium.test.TestNGDataDrivenTest">
+<testsuite hostname="ram-laptop" name="com.selenium.test.TestNGDataDrivenTest" tests="1" failures="0" timestamp="5 Jan 2011 18:25:45 GMT" time="8.315" errors="0">
+  <testcase name="wikiTest" time="0.0020" classname="com.selenium.test.TestNGDataDrivenTest">
     <skipped/>
   </testcase>
 </testsuite>
