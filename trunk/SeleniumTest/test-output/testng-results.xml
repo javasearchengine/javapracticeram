@@ -1,22 +1,22 @@
 <testng-results>
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6647" started-at="2010-12-24T22:27:02Z" finished-at="2010-12-24T22:27:09Z">
+  <suite name="Default suite" duration-ms="8315" started-at="2011-01-05T23:55:37Z" finished-at="2011-01-05T23:55:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6647" started-at="2010-12-24T22:27:02Z" finished-at="2010-12-24T22:27:09Z">
+    <test name="Default test" duration-ms="8315" started-at="2011-01-05T23:55:37Z" finished-at="2011-01-05T23:55:45Z">
       <class name="com.selenium.test.TestNGDataDrivenTest">
-        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="6156" started-at="2010-12-24T22:27:02Z" finished-at="2010-12-24T22:27:08Z">
+        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="7792" started-at="2011-01-05T23:55:37Z" finished-at="2011-01-05T23:55:44Z">
         </test-method>
-        <test-method status="FAIL" signature="wikiTest(java.lang.String)" name="wikiTest" duration-ms="0" started-at="2010-12-24T22:27:09Z" finished-at="2010-12-24T22:27:09Z">
+        <test-method status="FAIL" signature="wikiTest(java.util.Map)" name="wikiTest" duration-ms="0" started-at="2011-01-05T23:55:44Z" finished-at="2011-01-05T23:55:44Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
-Data Provider public java.lang.String[] com.selenium.test.TestNGDataDrivenTest.dataProvider() must return either Object[][] or Iterator<Object>[], not class [Ljava.lang.String;]]>
+Data Provider public java.util.Map com.selenium.test.TestNGDataDrivenTest.dataProvider() must return either Object[][] or Iterator<Object>[], not interface java.util.Map]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
-Data Provider public java.lang.String[] com.selenium.test.TestNGDataDrivenTest.dataProvider() must return either Object[][] or Iterator<Object>[], not class [Ljava.lang.String;
+Data Provider public java.util.Map com.selenium.test.TestNGDataDrivenTest.dataProvider() must return either Object[][] or Iterator<Object>[], not interface java.util.Map
 	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:132)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:391)
 	at org.testng.internal.Invoker.handleParameters(Invoker.java:1313)
@@ -43,7 +43,7 @@ Data Provider public java.lang.String[] com.selenium.test.TestNGDataDrivenTest.d
             </full-stacktrace>
           </exception>
         </test-method>
-        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="382" started-at="2010-12-24T22:27:09Z" finished-at="2010-12-24T22:27:09Z">
+        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="419" started-at="2011-01-05T23:55:44Z" finished-at="2011-01-05T23:55:45Z">
         </test-method>
       </class>
     </test>

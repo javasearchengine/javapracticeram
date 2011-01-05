@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.poi.hssf.eventusermodel.HSSFRequest;
@@ -82,77 +85,49 @@ public class TestNGDataDrivenTest {
 	}
 
 	@DataProvider(name = "DataSource")
-	public String[] dataProvider() {
-		String[] names = TestNGDataDrivenTest.readExcelData(
+	public Map<String, String> dataProvider() {
+		Map<String, String> testData = TestNGDataDrivenTest.readExcelData(
 				props.getProperty("excelName"), props.getProperty("sheetName"));
-		return names;
+		return testData;
 	}
 
-	public static String[]  readExcelData(String fileName, String sheetName) {
-//
-//		InputStream in = getClass().getResourceAsStream(fileName);
-		String[] names = null;
-
+	public static Map<String, String> readExcelData(String fileName,
+			String sheetName) {
+		Map<String, String> testData = new HashMap<String, String>();
 		try {
-			HSSFWorkbook wb = new HSSFWorkbook(new FileInputStream("/home/ram/test.xls"));
+			HSSFWorkbook wb = new HSSFWorkbook(new FileInputStream(
+					"/home/ram/test.xls"));
 			HSSFSheet sheet = wb.getSheet("TestSheet");
 
-			for (int k = 0; k < wb.getNumberOfSheets(); k++) {
-				HSSFSheet sheet = wb.getSheetAt(k);
-				int rows = sheet.getPhysicalNumberOfRows();
-				System.out.println("Sheet " + k + " \"" + wb.getSheetName(k) + "\" has " + rows
-						+ " row(s).");
-				for (int r = 0; r < rows; r++) {
-					HSSFRow row = sheet.getRow(r);
-					if (row == null) {
-						continue;
-					}
-
-					int cells = row.getPhysicalNumberOfCells();
-					System.out.println("\nROW " + row.getRowNum() + " has " + cells
-							+ " cell(s).");
-					for (int c = 0; c < cells; c++) {
-						HSSFCell cell = row.getCell(c);
-						String value = null;
-
-						switch (cell.getCellType()) {
-
-							case HSSFCell.CELL_TYPE_FORMULA:
-								value = "FORMULA value=" + cell.getCellFormula();
-								break;
-
-							case HSSFCell.CELL_TYPE_NUMERIC:
-								value = "NUMERIC value=" + cell.getNumericCellValue();
-								break;
-
-							case HSSFCell.CELL_TYPE_STRING:
-								value = "STRING value=" + cell.getStringCellValue();
-								break;
-
-							default:
-						}
-						System.out.println("CELL col=" + cell.getColumnIndex() + " VALUE="
-								+ value);
-					}
-				}
+			for (int i = 2; i < 5; i++) {
+				HSSFRow currRow = sheet.getRow(i);
+				testData.put(currRow.getCell(0).getStringCellValue().trim(),
+						currRow.getCell(1).getStringCellValue().trim());
 			}
+
 		} catch (Exception e) {
 			// TODO: handle exception
-			
+
 		}
 
-		return names;
+		return testData;
 
 	}
 
 	@Test(dataProvider = "DataSource")
-	public void wikiTest(String names) {
+	public void wikiTest(Map<String, String> testData) {
+
+		
+		for(int i=0;i<testData.size();i++){
+			System.out.println("Seacrch string is "+ testData.get("Ricky Ponting"));
+		}
+
 
 		selenium.setTimeout("100000");
 		selenium.setSpeed("2000"); // This command is to control the speed of
 									// selenium commands
 		selenium.open("/");
-		System.out.println("First Value " + names);
+//		System.out.println("First Value " + );
 
 	}
 
