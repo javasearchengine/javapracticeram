@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.server.RemoteControlConfiguration;
 import org.openqa.selenium.server.SeleniumServer;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -151,14 +152,15 @@ public class TestNGDataDrivenTest {
 	@Test(dataProvider = "DataSource")
 	public void wikiTest(String searchKeyword, String DOB) {
 
-		System.out.println("Search Keyword is " + searchKeyword);
-		System.out.println("DOB is " + DOB);
-
-		selenium.setTimeout("100000");
+		selenium.setTimeout("30000");
 		selenium.setSpeed("2000"); // This command is to control the speed of
 									// selenium commands
 		selenium.open("/");
-		// System.out.println("First Value " + );
+
+		selenium.type("searchInput", searchKeyword);
+		selenium.click("searchButton");
+		selenium.waitForPageToLoad("30000");
+		Assert.assertTrue(selenium.isTextPresent(DOB));
 
 	}
 

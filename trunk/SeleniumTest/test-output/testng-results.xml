@@ -1,14 +1,14 @@
 <testng-results>
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41199" started-at="2011-01-10T22:44:35Z" finished-at="2011-01-10T22:45:16Z">
+  <suite name="Default suite" duration-ms="86595" started-at="2011-01-10T22:58:31Z" finished-at="2011-01-10T22:59:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41199" started-at="2011-01-10T22:44:35Z" finished-at="2011-01-10T22:45:16Z">
+    <test name="Default test" duration-ms="86595" started-at="2011-01-10T22:58:31Z" finished-at="2011-01-10T22:59:57Z">
       <class name="com.selenium.test.TestNGDataDrivenTest">
-        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="6330" started-at="2011-01-10T22:44:35Z" finished-at="2011-01-10T22:44:41Z">
+        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="6438" started-at="2011-01-10T22:58:31Z" finished-at="2011-01-10T22:58:37Z">
         </test-method>
-        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="17605" started-at="2011-01-10T22:44:42Z" finished-at="2011-01-10T22:44:59Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="37615" started-at="2011-01-10T22:58:37Z" finished-at="2011-01-10T22:59:15Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="7610" started-at="2011-01-10T22:44:59Z" finished-at="2011-01-10T22:45:07Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="18972" started-at="2011-01-10T22:59:15Z" finished-at="2011-01-10T22:59:34Z">
           <params>
             <param index="0">
               <value>
@@ -36,7 +36,7 @@
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="8816" started-at="2011-01-10T22:45:07Z" finished-at="2011-01-10T22:45:16Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="22716" started-at="2011-01-10T22:59:34Z" finished-at="2011-01-10T22:59:57Z">
           <params>
             <param index="0">
               <value>
@@ -50,7 +50,7 @@
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="400" started-at="2011-01-10T22:45:16Z" finished-at="2011-01-10T22:45:16Z">
+        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="404" started-at="2011-01-10T22:59:57Z" finished-at="2011-01-10T22:59:57Z">
         </test-method>
       </class>
     </test>
