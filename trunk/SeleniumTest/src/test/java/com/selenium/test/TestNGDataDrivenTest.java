@@ -8,7 +8,6 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -107,7 +106,7 @@ public class TestNGDataDrivenTest {
 
 			testData = new String[endRow - startRow + 1][endCol - startCol + 1];
 
-			for (int i = startRow; i < endRow - 1; i++) {
+			for (int i = startRow; i < endRow + 1; i++) {
 				for (int j = startCol; j < endCol + 1; j++) {
 					testData[i - startRow][j - startCol] = sheet.getRow(i)
 							.getCell(j).getStringCellValue();

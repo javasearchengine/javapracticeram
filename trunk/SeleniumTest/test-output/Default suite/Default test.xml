@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="ram-laptop" name="com.selenium.test.TestNGDataDrivenTest" tests="2" failures="0" timestamp="6 Jan 2011 15:49:37 GMT" time="6.702" errors="0">
-  <testcase name="wikiTest" time="0.042" classname="com.selenium.test.TestNGDataDrivenTest"/>
-  <testcase name="wikiTest" time="0.043" classname="com.selenium.test.TestNGDataDrivenTest"/>
+<testsuite hostname="ram-laptop" name="com.selenium.test.TestNGDataDrivenTest" tests="3" failures="0" timestamp="10 Jan 2011 17:15:16 GMT" time="41.199" errors="0">
+  <testcase name="wikiTest" time="17.605" classname="com.selenium.test.TestNGDataDrivenTest"/>
+  <testcase name="wikiTest" time="7.61" classname="com.selenium.test.TestNGDataDrivenTest"/>
+  <testcase name="wikiTest" time="8.816" classname="com.selenium.test.TestNGDataDrivenTest"/>
 </testsuite>
