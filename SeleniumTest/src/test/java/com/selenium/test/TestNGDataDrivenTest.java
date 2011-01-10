@@ -85,49 +85,17 @@ public class TestNGDataDrivenTest {
 	}
 
 	@DataProvider(name = "DataSource")
-	public Map<String, String> dataProvider() {
-		Map<String, String> testData = TestNGDataDrivenTest.readExcelData(
-				props.getProperty("excelName"), props.getProperty("sheetName"));
-		return testData;
+	public Object[][] dataProvider() {
+
+		Object[][] returnObject = new Object[][]{{"Ramesh"},{"Rajesh"}};
+
+		return returnObject;
 	}
 
-	public static Map<String, String> readExcelData(String fileName,
-			String sheetName) {
-		Map<String, String> testData = new HashMap<String, String>();
-		try {
-			HSSFWorkbook wb = new HSSFWorkbook(new FileInputStream(
-					"/home/ram/test.xls"));
-			HSSFSheet sheet = wb.getSheet("TestSheet");
+	@Test(dataProvider="DataSource")
+	public void wikiTest(String name) {
 
-			for (int i = 2; i < 5; i++) {
-				HSSFRow currRow = sheet.getRow(i);
-				testData.put(currRow.getCell(0).getStringCellValue().trim(),
-						currRow.getCell(1).getStringCellValue().trim());
-			}
-
-		} catch (Exception e) {
-			// TODO: handle exception
-
-		}
-
-		return testData;
-
-	}
-
-	@Test(dataProvider = "DataSource")
-	public void wikiTest(Map<String, String> testData) {
-
-		
-		for(int i=0;i<testData.size();i++){
-			System.out.println("Seacrch string is "+ testData.get("Ricky Ponting"));
-		}
-
-
-		selenium.setTimeout("100000");
-		selenium.setSpeed("2000"); // This command is to control the speed of
-									// selenium commands
-		selenium.open("/");
-//		System.out.println("First Value " + );
+//		System.out.println(name);
 
 	}
 

@@ -1,49 +1,32 @@
 <testng-results>
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8315" started-at="2011-01-05T23:55:37Z" finished-at="2011-01-05T23:55:45Z">
+  <suite name="Default suite" duration-ms="6702" started-at="2011-01-06T21:19:30Z" finished-at="2011-01-06T21:19:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8315" started-at="2011-01-05T23:55:37Z" finished-at="2011-01-05T23:55:45Z">
+    <test name="Default test" duration-ms="6702" started-at="2011-01-06T21:19:30Z" finished-at="2011-01-06T21:19:37Z">
       <class name="com.selenium.test.TestNGDataDrivenTest">
-        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="7792" started-at="2011-01-05T23:55:37Z" finished-at="2011-01-05T23:55:44Z">
+        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="6120" started-at="2011-01-06T21:19:30Z" finished-at="2011-01-06T21:19:36Z">
         </test-method>
-        <test-method status="FAIL" signature="wikiTest(java.util.Map)" name="wikiTest" duration-ms="0" started-at="2011-01-05T23:55:44Z" finished-at="2011-01-05T23:55:44Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Data Provider public java.util.Map com.selenium.test.TestNGDataDrivenTest.dataProvider() must return either Object[][] or Iterator<Object>[], not interface java.util.Map]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Data Provider public java.util.Map com.selenium.test.TestNGDataDrivenTest.dataProvider() must return either Object[][] or Iterator<Object>[], not interface java.util.Map
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:132)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:391)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1313)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1022)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1122)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.runWorkers(TestRunner.java:1125)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:954)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:883)
-	at org.testng.TestNG.run(TestNG.java:817)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:110)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-]]>
-            </full-stacktrace>
-          </exception>
+        <test-method status="PASS" signature="wikiTest(java.lang.String)" name="wikiTest" duration-ms="42" started-at="2011-01-06T21:19:36Z" finished-at="2011-01-06T21:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ramesh]]>
+              </value>
+            </param>
+          </params>
         </test-method>
-        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="419" started-at="2011-01-05T23:55:44Z" finished-at="2011-01-05T23:55:45Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String)" name="wikiTest" duration-ms="43" started-at="2011-01-06T21:19:36Z" finished-at="2011-01-06T21:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rajesh]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="365" started-at="2011-01-06T21:19:36Z" finished-at="2011-01-06T21:19:37Z">
         </test-method>
       </class>
     </test>
