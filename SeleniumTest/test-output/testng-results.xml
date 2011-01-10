@@ -1,32 +1,56 @@
 <testng-results>
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6702" started-at="2011-01-06T21:19:30Z" finished-at="2011-01-06T21:19:37Z">
+  <suite name="Default suite" duration-ms="41199" started-at="2011-01-10T22:44:35Z" finished-at="2011-01-10T22:45:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6702" started-at="2011-01-06T21:19:30Z" finished-at="2011-01-06T21:19:37Z">
+    <test name="Default test" duration-ms="41199" started-at="2011-01-10T22:44:35Z" finished-at="2011-01-10T22:45:16Z">
       <class name="com.selenium.test.TestNGDataDrivenTest">
-        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="6120" started-at="2011-01-06T21:19:30Z" finished-at="2011-01-06T21:19:36Z">
+        <test-method status="PASS" signature="setUpServer()" name="setUpServer" is-config="true" duration-ms="6330" started-at="2011-01-10T22:44:35Z" finished-at="2011-01-10T22:44:41Z">
         </test-method>
-        <test-method status="PASS" signature="wikiTest(java.lang.String)" name="wikiTest" duration-ms="42" started-at="2011-01-06T21:19:36Z" finished-at="2011-01-06T21:19:36Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="17605" started-at="2011-01-10T22:44:42Z" finished-at="2011-01-10T22:44:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Ramesh]]>
+                <![CDATA[Sachin Tendulkar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[24 April 1973]]>
               </value>
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="wikiTest(java.lang.String)" name="wikiTest" duration-ms="43" started-at="2011-01-06T21:19:36Z" finished-at="2011-01-06T21:19:36Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="7610" started-at="2011-01-10T22:44:59Z" finished-at="2011-01-10T22:45:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Rajesh]]>
+                <![CDATA[Brian Lara]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2 May 1969]]>
               </value>
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="365" started-at="2011-01-06T21:19:36Z" finished-at="2011-01-06T21:19:37Z">
+        <test-method status="PASS" signature="wikiTest(java.lang.String, java.lang.String)" name="wikiTest" duration-ms="8816" started-at="2011-01-10T22:45:07Z" finished-at="2011-01-10T22:45:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ricky Ponting]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[19 December 1974]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="cleanUp()" name="cleanUp" is-config="true" duration-ms="400" started-at="2011-01-10T22:45:16Z" finished-at="2011-01-10T22:45:16Z">
         </test-method>
       </class>
     </test>
