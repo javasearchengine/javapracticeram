@@ -1,4 +1,4 @@
-package com.selenium.test;
+package com.selenium.DataDrivenTest;
 
 import java.io.File;
 import java.io.FileInputStream;
